@@ -58,7 +58,7 @@ public class MainActivity extends AppCompatActivity {
         watchTypeGroup.setOnCheckedChangeListener((group, checkedId) -> {
             selectedRadioButton = findViewById(checkedId);
             String watchType = selectedRadioButton.getText().toString();
-            // You can use watchType if needed
+        
         });
 
         orderButton.setOnClickListener(view -> displaySelectedBrands());
