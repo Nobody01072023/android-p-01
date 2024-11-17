@@ -27,7 +27,7 @@ public class MainActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        // Initializing UI components
+  
         rolexCheckBox = findViewById(R.id.rolex);
         omegaCheckBox = findViewById(R.id.omega);
         tagHeuerCheckBox = findViewById(R.id.tag_heuer);
@@ -44,7 +44,6 @@ public class MainActivity extends AppCompatActivity {
         bookButton = findViewById(R.id.book_btn); // New button for navigating to BookActivity
         ratingBar = findViewById(R.id.ratingBar);
 
-        // Increment and decrement functionality for quantity
         incrementButton.setOnClickListener(view -> {
             quantity++;
             updateQuantityAndPrice();
@@ -57,22 +56,19 @@ public class MainActivity extends AppCompatActivity {
             updateQuantityAndPrice();
         });
 
-        // Handle RadioGroup for watch type selection
         watchTypeGroup.setOnCheckedChangeListener((group, checkedId) -> {
             selectedRadioButton = findViewById(checkedId);
             String watchType = selectedRadioButton.getText().toString();
-            // You can use watchType if needed
+        
         });
 
-        // Display selected brands on the Order button click
         orderButton.setOnClickListener(view -> displaySelectedBrands());
 
-        // RatingBar listener to update the rating text
+       
         ratingBar.setOnRatingBarChangeListener((ratingBar1, rating, fromUser) -> {
             ratingTextView.setText("Rating: " + rating);
         });
 
-        // Navigate to FormActivity when "Create a form" button is clicked
         formButton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, FormActivity.class);
             startActivity(intent);
@@ -85,14 +81,12 @@ public class MainActivity extends AppCompatActivity {
         });
     }
 
-    // Update quantity and price when incrementing or decrementing
     private void updateQuantityAndPrice() {
         quantityTextView.setText(String.valueOf(quantity));
         int totalPrice = quantity * pricePerWatch;
         priceTextView.setText("BDT " + totalPrice);
     }
 
-    // Display selected watch brands in the TextView
     private void displaySelectedBrands() {
         StringBuilder selectedBrands = new StringBuilder("Selected Brands: ");
         if (rolexCheckBox.isChecked()) selectedBrands.append("Rolex ");
