@@ -17,7 +17,7 @@ public class MainActivity extends AppCompatActivity {
     private RadioGroup watchTypeGroup;
     private RadioButton selectedRadioButton;
     private TextView quantityTextView, priceTextView, brandsTextView, ratingTextView, watchTypeTextView;
-    private Button incrementButton, decrementButton, orderButton, formButton;
+    private Button incrementButton, decrementButton, orderButton, formButton, bookButton;
     private RatingBar ratingBar;
     private int quantity = 0;
     private final int pricePerWatch = 5000;
@@ -41,6 +41,7 @@ public class MainActivity extends AppCompatActivity {
         decrementButton = findViewById(R.id.decrement);
         orderButton = findViewById(R.id.order_btn);
         formButton = findViewById(R.id.form_btn);
+        bookButton = findViewById(R.id.book_btn); // New button for navigating to BookActivity
         ratingBar = findViewById(R.id.ratingBar);
 
         // Increment and decrement functionality for quantity
@@ -74,6 +75,12 @@ public class MainActivity extends AppCompatActivity {
         // Navigate to FormActivity when "Create a form" button is clicked
         formButton.setOnClickListener(view -> {
             Intent intent = new Intent(MainActivity.this, FormActivity.class);
+            startActivity(intent);
+        });
+
+        // Navigate to BookActivity when "Go to Book Activity" button is clicked
+        bookButton.setOnClickListener(view -> {
+            Intent intent = new Intent(MainActivity.this, BookActivity.class);
             startActivity(intent);
         });
     }

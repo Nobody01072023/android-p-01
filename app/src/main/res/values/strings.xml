@@ -1,3 +1,35 @@
 <resources>
+    <!-- App Name -->
     <string name="app_name">Watch Shop</string>
+
+    <!-- Expandable List Activity -->
+    <string name="activity_expandable_list">Book Genres</string>
+
+    <!-- Genres -->
+    <string-array name="genre_array">
+        <item>Fiction</item>
+        <item>Science</item>
+        <item>History</item>
+    </string-array>
+
+    <!-- Fiction Books -->
+    <string-array name="book_array_fiction">
+        <item>The Great Gatsby</item>
+        <item>To Kill a Mockingbird</item>
+        <item>1984</item>
+    </string-array>
+
+    <!-- Science Books -->
+    <string-array name="book_array_science">
+        <item>A Brief History of Time</item>
+        <item>The Selfish Gene</item>
+        <item>The Origin of Species</item>
+    </string-array>
+
+    <!-- History Books -->
+    <string-array name="book_array_history">
+        <item>Sapiens: A Brief History of Humankind</item>
+        <item>The Silk Roads: A New History of the World</item>
+        <item>Guns, Germs, and Steel</item>
+    </string-array>
 </resources>

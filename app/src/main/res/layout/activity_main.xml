@@ -1,74 +1,52 @@
-<?xml version="1.0" encoding="utf-8"?>
-<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:id="@+id/main"
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:layout_margin="30dp"
-    android:background="@color/buttonTextColor">
+    android:padding="16dp">
 
+    <!-- CheckBoxes for Watch Brands -->
     <TextView
+        android:id="@+id/select_brands_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Watch Brands:"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:textColor="@color/fire_brick_500" />
+        android:textSize="18sp"
+        android:layout_marginBottom="8dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal">
-
-        <CheckBox
-            android:id="@+id/rolex"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:text="Rolex"
-            android:textSize="12sp" />
-
-        <CheckBox
-            android:id="@+id/omega"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:text="Omega"
-            android:textSize="12sp" />
-
-        <CheckBox
-            android:id="@+id/tag_heuer"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginRight="5dp"
-            android:text="Tag Heuer"
-            android:textSize="12sp" />
-
-        <CheckBox
-            android:id="@+id/casio"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="5dp"
-            android:text="Casio"
-            android:textSize="12sp" />
-    </LinearLayout>
-
-    <TextView
-        android:id="@+id/brands"
+    <CheckBox
+        android:id="@+id/rolex"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text=""
-        android:textSize="18sp"
-        android:textAllCaps="true" />
+        android:text="Rolex" />
 
+    <CheckBox
+        android:id="@+id/omega"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Omega" />
+
+    <CheckBox
+        android:id="@+id/tag_heuer"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tag Heuer" />
+
+    <CheckBox
+        android:id="@+id/casio"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Casio" />
+
+    <!-- RadioGroup for Watch Types -->
     <TextView
+        android:id="@+id/select_watch_type_text"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Select Watch Type:"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/fire_brick_500" />
+        android:textSize="18sp"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="8dp" />
 
     <RadioGroup
         android:id="@+id/radioGroup"
@@ -77,72 +55,52 @@
         android:orientation="horizontal">
 
         <RadioButton
+            android:id="@+id/analog"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginRight="10dp"
-            android:text="Analog"
-            android:textSize="12sp" />
+            android:text="Analog" />
 
         <RadioButton
+            android:id="@+id/digital"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="Digital"
-            android:textSize="12sp" />
-
-        <RadioButton
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginEnd="10dp"
-            android:text="Smart"
-            android:textSize="12sp" />
+            android:text="Digital" />
     </RadioGroup>
 
+    <!-- Quantity and Price Section -->
     <TextView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Quantity"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/fire_brick_500" />
+        android:text="Quantity:"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
 
     <LinearLayout
-        android:layout_width="match_parent"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="horizontal">
+        android:orientation="horizontal"
+        android:layout_marginTop="8dp">
 
         <Button
             android:id="@+id/decrement"
             android:layout_width="wrap_content"
-            android:layout_height="match_parent"
-            android:text="Subtract"
-            android:textSize="12sp" />
+            android:layout_height="wrap_content"
+            android:text="-" />
 
         <TextView
             android:id="@+id/quantityTextView"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
             android:text="0"
-            android:textSize="20sp"
-            android:layout_marginHorizontal="15dp" />
+            android:textSize="18sp" />
 
         <Button
             android:id="@+id/increment"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Add"
-            android:textSize="12sp" />
+            android:text="+" />
     </LinearLayout>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Price (BDT 5000 each)"
-        android:textSize="20sp"
-        android:textStyle="bold"
-        android:layout_marginTop="10dp"
-        android:textColor="@color/fire_brick_500" />
 
     <TextView
         android:id="@+id/priceTextView"
@@ -150,62 +108,61 @@
         android:layout_height="wrap_content"
         android:text="BDT 0"
         android:textSize="18sp"
-        android:textAllCaps="true" />
+        android:layout_marginTop="8dp" />
 
-    <LinearLayout
-        android:layout_width="match_parent"
+    <!-- Rating Section -->
+    <TextView
+        android:id="@+id/rating_text"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
-        android:gravity="center"
-        android:layout_marginVertical="20dp">
+        android:text="Rate this watch:"
+        android:textSize="18sp"
+        android:layout_marginTop="16dp" />
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Rate Us"
-            android:textSize="25sp"
-            android:textStyle="bold"
-            android:layout_marginTop="40dp"
-            android:textColor="@color/tag_heuer_blue" />
+    <RatingBar
+        android:id="@+id/ratingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:numStars="5"
+        android:stepSize="0.5" />
 
-        <RatingBar
-            android:id="@+id/ratingBar"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:numStars="5"
-            android:stepSize="0.5"
-            android:progressTint="@color/omega_red"
-            android:progressBackgroundTint="@color/black" />
+    <TextView
+        android:id="@+id/rating"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Rating: 0"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp" />
 
-        <TextView
-            android:id="@+id/rating"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:textSize="20sp"
-            android:textStyle="bold"
-            android:layout_marginTop="10dp"
-            android:text="Rating: 0.0"
-            android:textColor="@color/textColorPrimary" />
-    </LinearLayout>
+    <!-- Selected Brands Text -->
+    <TextView
+        android:id="@+id/brands"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Selected Brands: None"
+        android:textSize="16sp"
+        android:layout_marginTop="16dp" />
 
+    <!-- Buttons for Actions -->
     <Button
         android:id="@+id/order_btn"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal"
-        android:text="Order"
-        android:textColor="@color/textColorPrimary"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Place Order"
+        android:layout_marginTop="16dp" />
+
     <Button
         android:id="@+id/form_btn"
-        android:layout_width="150dp"
-        android:layout_height="40dp"
-        android:layout_marginTop="20dp"
-        android:layout_gravity="center_horizontal"
-        android:text="Create a form"
-        android:textColor="@color/textColorPrimary"
-        android:textSize="15sp"
-        android:textStyle="bold" />
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Create a Form"
+        android:layout_marginTop="8dp" />
+
+    <Button
+        android:id="@+id/book_btn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Go to Book Activity"
+        android:layout_marginTop="8dp" />
 </LinearLayout>
